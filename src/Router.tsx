@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./pages/Main/Main";
-import Feed from "./pages/Feed/Feed";
-import Map from "./pages/Map/Map";
-import MyPage from "./pages/MyPage/MyPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './pages/Main/Main';
+import Feed from './pages/Feed/Feed';
+import Map from './pages/Map/Map';
+import MyPage from './pages/MyPage/MyPage';
 
 const Router = () => {
   return (

@@ -1,10 +1,20 @@
+const width = {
+  // desktop :
+  laptop: '450px',
+  // tablet :
+  // mobile :
+};
+
+const height = {
+  // desktop :
+  laptop: '800px',
+  // tablet :
+  // mobile :
+};
+
 const theme = {
-  black: '#000000',
-  white: '#FFFFFF',
-  lightGrey: '#B0B0B0',
-  middleGrey: '#717171',
-  deepGrey: '#222222',
-  hoverGrey: '#DBDBDB',
+  laptopWidth: `${width.laptop}`,
+  laptopHeight: `${height.laptop}`,
 };
 
 export default theme;

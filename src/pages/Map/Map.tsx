@@ -1,6 +1,16 @@
+import { useState } from 'react';
 import './Map.scss';
+import Kakao from './Kakao';
+import List from './List';
 
 const Map: React.FC = () => {
+  const [layout, setLayout] = useState(false);
+
+  const handleLayout = () => {
+    setLayout(!layout);
+    console.log('clicked');
+  };
+
   return (
     <div className="MapMain">
       <div className="TopNav">
@@ -12,7 +22,11 @@ const Map: React.FC = () => {
           );
         })}
       </div>
-      <div className="MapDisplay"></div>
+      <div className="MapDisplay">
+        {layout ? <List /> : <Kakao />}
+        <div className="CurrentLocation"></div>
+        <div className="LayoutChange" onClick={handleLayout}></div>
+      </div>
       <div className="MainNav">
         <button className="MainNavBtn">
           <div className="MainNavIcon">피드</div>

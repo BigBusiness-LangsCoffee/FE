@@ -6,12 +6,12 @@
 }
 
 .TopNav {
-  border: 1px solid black;
-  height: 40px;
+  height: 30px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .TopNavCategory {
@@ -20,16 +20,42 @@
   cursor: pointer;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 10px;
 }
 
 .MapDisplay {
-  border: 1px solid black;
-  height: 40px;
+  height: 100%;
   width: 100%;
 }
 
+.CurrentLocation {
+  border: 5px solid red;
+  background-color: yellow;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  position: absolute;
+  margin-left: 380px;
+  margin-top: -70px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.LayoutChange {
+  border: 5px solid red;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  position: absolute;
+  margin-left: 380px;
+  margin-top: -650px;
+  cursor: pointer;
+  z-index: 9;
+}
+
 .MainNav {
-  border: 1px solid black;
+  
   height: 80px;
   width: 100%;
   display: flex;

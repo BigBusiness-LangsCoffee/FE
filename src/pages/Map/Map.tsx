@@ -8,7 +8,6 @@ const Map: React.FC = () => {
 
   const handleLayout = () => {
     setLayout(!layout);
-    console.log('clicked');
   };
 
   return (
@@ -23,9 +22,11 @@ const Map: React.FC = () => {
         })}
       </div>
       <div className="MapDisplay">
-        {layout ? <List /> : <Kakao />}
-        <div className="CurrentLocation"></div>
+        <div className={layout ? 'CurrentLocationInvisible' : 'CurrentLocation'}>
+          <div className="CurrentLocationIcon"></div>
+        </div>
         <div className="LayoutChange" onClick={handleLayout}></div>
+        {layout ? <List /> : <Kakao />}
       </div>
       <div className="MainNav">
         <button className="MainNavBtn">

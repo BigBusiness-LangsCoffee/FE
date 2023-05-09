@@ -1,3 +1,4 @@
+
 import './MyPage.scss';
 
 const MyPage = () => {

@@ -8,6 +8,7 @@ const style = {
   border: '1px solid red',
   width: '450px',
   height: '800px',
+  overflow: 'scroll',
 };
 
 const Router = () => {

@@ -1,13 +1,7 @@
-import DetailParty from '../Detail/DetailParty';
 import './MyPage.scss';
 
 const MyPage = () => {
-  return (
-    <>
-      <div>MyPage</div>
-      <DetailParty />
-    </>
-  );
+  return <></>;
 };
 
 export default MyPage;

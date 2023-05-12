@@ -1,8 +1,92 @@
-.back {
-    background-color: red;
+.detailParty{
+    position: relative;
+}
+.buttonList {
     width: 100%;
-    height: 200%;
-    ::-webkit-scrollbar{
-        display: none;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    .subBtn{
+        display: flex;
+        justify-content: space-around;
+        width: 200px;
     }
+    button {
+        width: 45px;
+        height: 45px;
+        border: 1px solid #999999;
+        border-radius: 100%;
+        background-color: white;
+        color: #999999;
+        font-weight: 400;
+        font-size: 8px;
+    }
+}
+
+.subNav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1459px;
+    background-color: #F22C00;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    .subNavList{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        button{
+            width: 45px;
+            height: 45px;
+            border: 1px solid #999999;
+            border-radius: 100%;
+            background-color: white;
+            color: #999999;
+        }
+    }
+}
+
+.mainDetailList{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 1367px;;
+    border-radius: 50px;
+    background-color: white;
+    top: 120px;
+    
+    ul{
+        display:  flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        height:200px;
+        padding: 30px;
+        li {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            border: 1px solid black;
+            border-radius: 100%;
+            font-size: 12px;
+        }
+    }
+
+    
+}
+.pmBtnList{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
 }

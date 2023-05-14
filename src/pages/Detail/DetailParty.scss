@@ -1,35 +1,24 @@
 .detailParty{
     position: relative;
 }
-.buttonList {
-    width: 100%;
-    height: 38px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    .subBtn{
-        display: flex;
-        justify-content: space-around;
-        width: 200px;
-    }
-    button {
-        width: 45px;
-        height: 45px;
-        border: 1px solid #999999;
-        border-radius: 100%;
-        background-color: white;
-        color: #999999;
-        font-weight: 400;
-        font-size: 8px;
-    }
+
+.boundaryLine{
+    width: 390px;
+    height: 1px;
+    margin: 20px 0px;
+    border: 1px solid #E6E6E6;
 }
+
+button{
+    cursor: pointer;
+}
+
 
 .subNav{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 1459px;
+    height: 200px;
     background-color: #F22C00;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
@@ -38,7 +27,7 @@
         justify-content: space-between;
         align-items: center;
         width: 80%;
-        height: 50px;
+        height: 70px;
         font-size: 14px;
         font-weight: 600;
         color: white;
@@ -50,6 +39,10 @@
             background-color: white;
             color: #999999;
         }
+        p{
+            width: 60px;
+            text-align: center;
+        }
     }
 }
 
@@ -60,71 +53,82 @@
     flex-direction: column;
     padding: 20px;
     width: 100%;
-    height: 1367px;;
-    border-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
     background-color: #F2F2F2;
     top: 120px;
-    
-    ul{
-        display:  flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        height:200px;
-        padding: 30px;
-        li {
-            width: 60px;
-            height: 60px;
-            text-align: center;
-            line-height: 60px;
-            border: 1px solid black;
-            border-radius: 100%;
-            font-size: 12px;
+    .partyList{
+        margin-bottom: 20px;
+        ul{
+            display:  flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            li {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 60px;
+                height: 60px;
+                margin: 10px 0px;
+                text-align: center;
+                border: 1px solid black;
+                border-radius: 100%;
+                overflow: hidden;
+            }
         }
-    }
-
     
+        .discountPer{
+            display: flex;
+            justify-content: flex-end;
+            width: 390px;
+            padding-right: 20px;
+        }
+    }    
 }
 .pmBtnList{
     width: 80%;
     display: flex;
     justify-content: space-around;
+
+    button{
+        width: 110px;
+        height: 40px;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 30px;
+        margin: 10px 0px;
+    }
+
+    .selectInvite{
+        background-color: #F22C00;
+        border: 1px solid #F22C00;
+    }
 }
 
 
-    .aMenuBox{
-        width: 358px;
-        height: 132px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-radius: 30px;
-        background-color: white;
-    }
-    .imgBox{
-        background-color: #F2F2F2;
-        border-radius: 20px;
-        width: 100px;
-        height: 100px;
-    }
-    .textBox{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 200px;
-        height: 100px;
-        .btnList{
-            display: flex;
-            align-items: center;
-            button{
-                border: none;
-                background-color: white;
-                cursor: pointer;
-                font-size: 20px;
-            }
-        }
-    }
-
-
    
+
+   .needTextBox{
+    width: 390px;
+    margin: 10px 0px;
+    textarea{
+        width: 390px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+   }
+
+   .title{
+    width: 390px;
+    margin: 20px 0px;
+   }
+
+   .payBox{
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+   }

@@ -1,0 +1,41 @@
+.aMenuBox{
+    width: 358px;
+    height: 132px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    margin: 10px 0px;
+}
+.imgBox{
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+}
+.textBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 100px;
+    .delBtn{
+        position: absolute;
+        background-color: white;
+        border: none;
+        top:0px;
+        right: 5px;
+    }
+    .btnList{
+        display: flex;
+        align-items: center;
+        button{
+            border: none;
+            background-color: white;
+            font-size: 20px;
+        }
+    }
+}

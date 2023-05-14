@@ -1,32 +1,36 @@
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import DetailNav from '../../components/DetailNav';
+import FreindList from './DetailComponents/FreindList';
+import MenuBox from './DetailComponents/MenuBox';
+import OrderDetail from './DetailComponents/OrderDetail';
+import TotalPrice from './DetailComponents/TotalPrice';
 import './DetailParty.scss';
 
 const DetailParty = () => {
-  const [aMenuCount, setMenuCount] = useState<number>(1);
-  const [aPrice, setAPrice] = useState<number>(1000);
+  const [needText, setNeedText] = useState<string>('');
+  const [isCancel, setIsCancel] = useState<boolean>(false);
+  const [invite, setInvite] = useState<boolean>(false);
 
-  console.log(aMenuCount);
-  const aMenuSet = (e: any) => {
-    if (e.target.name === '-' && aMenuCount > 1) {
-      return setMenuCount(aMenuCount - 1);
-    } else if (e.target.name === '+') {
-      return setMenuCount(aMenuCount + 1);
+  const changeNeed = (e: any) => {
+    setNeedText(e.target.value);
+  };
+  const menuName = 'mmm';
+  const title = '개별메뉴';
+  const title2 = '공통메뉴';
+
+  const handleBtn = (e: any) => {
+    if (e.target.innerHTML === '파티취소') {
+      setIsCancel(true);
+      setInvite(false);
+    } else if (e.target.innerHTML === '유지하기') {
+      setIsCancel(false);
+    } else if (e.target.innerHTML === '초대하기') {
+      setInvite(true);
     }
   };
-
   return (
     <div className="detailParty">
-      <div className="buttonList">
-        <div>
-          <button>뒤로</button>
-        </div>
-        <div className="subBtn">
-          <button>선물</button>
-          <button>파티</button>
-          <button>팔로우</button>
-        </div>
-      </div>
+      <DetailNav />
       <div className="subNav">
         <div className="subNavList">
           <p>파티모드</p>
@@ -35,69 +39,129 @@ const DetailParty = () => {
         </div>
       </div>
       <div className="mainDetailList">
-        <div>
-          <h2 className="left">파티모드</h2>
+        <div className="partyList">
+          <h2 className="title">파티모드</h2>
           <ul>
-            <li>사진</li>
-            <li>빈칸</li>
-            <li>5프로 할인</li>
-            <li>빈칸</li>
-            <li>5프로 할인</li>
-            <li>빈칸</li>
-            <li>빈칸</li>
-            <li>20프로 할인</li>
-            <li>빈칸</li>
-            <li>25프로 할인</li>
+            {FIRSTFREINDLIST.map(({ id, src }: { id: number; src: string }) => {
+              return (
+                <li key={id}>
+                  <img src={src} />
+                </li>
+              );
+            })}
           </ul>
+          <div className="discountPer">
+            <p>5% 할인</p>
+          </div>
+          <ul>
+            {SECONDFREINDLIST.map(({ id, src }: { id: number; src: string }) => {
+              return (
+                <li key={id}>
+                  <img src={src} />
+                </li>
+              );
+            })}
+          </ul>
+          <div className="discountPer">
+            <p>10% 할인</p>
+          </div>
         </div>
         <div className="pmBtnList">
-          <button>취소하기</button>
-          <button>유지하기</button>
+          <button
+            onClick={(e) => {
+              handleBtn(e);
+            }}
+          >
+            {isCancel ? '취소하기' : '파티취소'}
+          </button>
+          <button
+            className={invite ? 'selectInvite' : ''}
+            onClick={(e) => {
+              handleBtn(e);
+            }}
+          >
+            {isCancel ? '유지하기' : '초대하기'}
+          </button>
         </div>
-        <h2>개별메뉴</h2>
-        <div>
-          <div className="aMenuBox">
-            <div className="imgBox">
-              <img src="#" alt="#" />
+        {isCancel && <h2>정말로 취소하시겠습니까??</h2>}
+        {invite && (
+          <>
+            <div className="linkBtnList">
+              <button>초대 링크 복사하기</button>
+              <button>QR코드</button>
             </div>
-            <div className="textBox">
-              <p>무슨무슨 메뉴</p>
-              <p>{aPrice}</p>
-              <div className="btnList">
-                <button
-                  name="-"
-                  onClick={(e) => {
-                    aMenuSet(e);
-                  }}
-                >
-                  -
-                </button>
-                <p>{aMenuCount}</p>
-                <button
-                  name="+"
-                  onClick={(e) => {
-                    aMenuSet(e);
-                  }}
-                >
-                  +
-                </button>
-              </div>
+            <div className="partnerList">
+              {MYFREINDS.map(({ id, name }: { id: number; name: string }) => {
+                return <FreindList key={id} name={name} />;
+              })}
+            </div>
+          </>
+        )}
+        <div className="boundaryLine"></div>
+        <h2 className="title">{title}</h2>
+        <MenuBox price={1000} menuName={menuName} />
+        <h2 className="title">{title2}</h2>
+        <MenuBox price={2000} menuName={menuName} />
+        <MenuBox price={2000} menuName={menuName} />
+        <MenuBox price={2000} menuName={menuName} />
+        <div className="boundaryLine"></div>
+        <OrderDetail />
+        <div className="needTextBox">
+          <p>요청 사항</p>
+          <textarea
+            value={needText}
+            placeholder="맛있게 부탁드립니다."
+            onChange={(e) => {
+              changeNeed(e);
+            }}
+          />
+        </div>
+        <div className="boundaryLine"></div>
+        <div className="payBox">
+          <div>
+            <p>결제 수단</p>
+          </div>
+          <div>
+            <div>1234 **** **** ****</div>
+            <div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
             </div>
           </div>
         </div>
-        <div>
-          <h2>공통메뉴</h2>
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="boundaryLine"></div>
+        <TotalPrice />
       </div>
     </div>
   );
 };
 
 export default DetailParty;
+
+const MYFREINDS = [
+  { id: 1, name: '김은후' },
+  { id: 2, name: '차원준' },
+  { id: 3, name: '김장미' },
+  { id: 4, name: '김유림' },
+  { id: 5, name: '이세연' },
+  { id: 6, name: '이용준' },
+  { id: 7, name: '한대진' },
+  { id: 8, name: '이용진' },
+];
+
+const FIRSTFREINDLIST = [
+  { id: 1, src: '' },
+  { id: 2, src: '' },
+  { id: 3, src: '' },
+  { id: 4, src: '' },
+  { id: 5, src: '' },
+];
+
+const SECONDFREINDLIST = [
+  { id: 6, src: '' },
+  { id: 7, src: '' },
+  { id: 8, src: '' },
+  { id: 9, src: '' },
+  { id: 10, src: '' },
+];

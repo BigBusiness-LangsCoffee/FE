@@ -1,0 +1,26 @@
+.toggleList{
+    width: 390px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0px;
+    .toggleBtnList{
+        border: 1px solid #999999;
+        border-radius: 30px;
+        .selectBtn{
+            border-radius: 30px;
+            border: 2px solid #F22C00;
+        }
+        .noneSelectBtn{
+            border-radius: 30px;
+            border: none;
+            color: #999999;
+        }
+        button{
+            height: 50px;
+            padding: 0px 30px;
+            border:1px solid  rgba(0, 0, 0, 0);
+        }
+    }
+   }

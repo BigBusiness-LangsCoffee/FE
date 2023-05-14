@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './DetailParty.scss';
 
 const DetailParty = () => {
+  const [aMenuCount, setMenuCount] = useState<number>(1);
+  const [aPrice, setAPrice] = useState<number>(1000);
+
+  console.log(aMenuCount);
+  const aMenuSet = (e: any) => {
+    if (e.target.name === '-' && aMenuCount > 1) {
+      return setMenuCount(aMenuCount - 1);
+    } else if (e.target.name === '+') {
+      return setMenuCount(aMenuCount + 1);
+    }
+  };
+
   return (
     <div className="detailParty">
       <div className="buttonList">
@@ -24,7 +36,7 @@ const DetailParty = () => {
       </div>
       <div className="mainDetailList">
         <div>
-          <h2>파티모드</h2>
+          <h2 className="left">파티모드</h2>
           <ul>
             <li>사진</li>
             <li>빈칸</li>
@@ -42,8 +54,36 @@ const DetailParty = () => {
           <button>취소하기</button>
           <button>유지하기</button>
         </div>
+        <h2>개별메뉴</h2>
         <div>
-          <h2>개별메뉴</h2>
+          <div className="aMenuBox">
+            <div className="imgBox">
+              <img src="#" alt="#" />
+            </div>
+            <div className="textBox">
+              <p>무슨무슨 메뉴</p>
+              <p>{aPrice}</p>
+              <div className="btnList">
+                <button
+                  name="-"
+                  onClick={(e) => {
+                    aMenuSet(e);
+                  }}
+                >
+                  -
+                </button>
+                <p>{aMenuCount}</p>
+                <button
+                  name="+"
+                  onClick={(e) => {
+                    aMenuSet(e);
+                  }}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <h2>공통메뉴</h2>

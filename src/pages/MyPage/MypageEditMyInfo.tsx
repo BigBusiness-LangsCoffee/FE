@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MypageEditMyInfo.scss';
 
 const MypageEditMyInfo = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="topDiv">
@@ -14,7 +16,9 @@ const MypageEditMyInfo = () => {
       <hr className="hrLine" />
       <div className="buttonDiv">
         <button className="btnSave">저장하기</button>
-        <button className="btnBack">취소하기</button>
+        <button className="btnBack" onClick={() => navigate('/payAndAlarm')}>
+          취소하기
+        </button>
       </div>
     </div>
   );

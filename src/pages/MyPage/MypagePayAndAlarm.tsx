@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { menu } from '../../asset/pic';
+import Profiles from '../../components/common/Profiles';
 import Header from '../../components/nav/Header';
+import MypageCardBox from './MypageCardBox';
 import './MypagePayAndAlarm.scss';
 
 const MypagePayAndAlarm = () => {
@@ -13,16 +15,19 @@ const MypagePayAndAlarm = () => {
       id: 1,
       pay: '신한카드',
       cardNumber: '1122 3344 5566 7788',
+      editAndDelete: false,
     },
     {
       id: 2,
       pay: 'KB국민카드',
       cardNumber: '1122 3344 5566 7777',
+      editAndDelete: false,
     },
     {
       id: 3,
       pay: '토스카드',
       cardNumber: '1122 3344 5566 7799',
+      editAndDelete: false,
     },
   ];
 
@@ -35,16 +40,11 @@ const MypagePayAndAlarm = () => {
     setPayment(false);
     setAlarm(!alarm);
   };
+
   return (
     <div>
       <Header />
-      <div className="Info">
-        <img />
-        <div>
-          <h1 className="infoFirstDiv">보노보노</h1>
-          <div className="infoSecondDiv">2</div>
-        </div>
-      </div>
+      <Profiles />
       <div className="changeMyInfo">
         <img src={menu} />
         <div onClick={() => navigate('/editMyInfo')}>프로필 수정하기</div>
@@ -62,18 +62,14 @@ const MypagePayAndAlarm = () => {
           <>
             <div className="menuToggle">
               {a.map((data) => {
+                console.log(data.editAndDelete);
                 const numArray = data.cardNumber.split(' ');
 
                 numArray[1] = '*'.repeat(numArray[1].length);
                 numArray[2] = '*'.repeat(numArray[2].length);
 
                 numArray.join(' ');
-                return (
-                  <div className="payBox">
-                    <div>{data.pay}</div>
-                    <span>{numArray}</span>
-                  </div>
-                );
+                return <MypageCardBox data={data} numArray={numArray} />;
               })}
             </div>
             <div className="passOrCard">
@@ -96,9 +92,23 @@ const MypagePayAndAlarm = () => {
         {alarm ? (
           <>
             <div>
-              <div>
+              <div className="secondDiv">
                 <div>이벤트 / 혜택</div>
+                <div>
+                  <input type="checkbox" id="toggle" hidden />
+                  <label htmlFor="toggle" className="toggleSwitch">
+                    <span className="toggleButton"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="secondDiv">
                 <div>주문 현황</div>
+                <div>
+                  <input type="checkbox" id="toggle2" hidden />
+                  <label htmlFor="toggle2" className="toggleSwitch2">
+                    <span className="toggleButton2"></span>
+                  </label>
+                </div>
               </div>
             </div>
           </>
@@ -115,6 +125,11 @@ const MypagePayAndAlarm = () => {
           <img src={menu} />
         </div>
       </>
+      <div className="logOutAndVersion">
+        <h1>로그아웃</h1>
+        <h4>버전정보</h4>
+        <h6>1.0.0.1</h6>
+      </div>
     </div>
   );
 };

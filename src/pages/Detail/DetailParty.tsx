@@ -104,6 +104,26 @@ const DetailParty = () => {
         <MenuBox price={2000} menuName={menuName} />
         <MenuBox price={2000} menuName={menuName} />
         <MenuBox price={2000} menuName={menuName} />
+        <div className="discount">
+          <div className="couponList">
+            <p>쿠폰</p>
+            <div className="coupon">
+              <p>쿠폰 이름</p>
+              <h4>1,000원 할인</h4>
+              <button className="checkBtn"></button>
+            </div>
+          </div>
+          <div className="point">
+            <p>포인트</p>
+            <div>
+              <input className="isPoint" disabled value={'0원'}></input>
+            </div>
+          </div>
+          <div className="checkPoint">
+            <p>전부 사용하기</p>
+            <button className="checkBtn"></button>
+          </div>
+        </div>
         <div className="boundaryLine"></div>
         <OrderDetail />
         <div className="needTextBox">

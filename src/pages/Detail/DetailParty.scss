@@ -107,6 +107,50 @@ button{
     }
 }
 
+.discount{
+    width: 390px;
+    margin: 30px 0px;
+
+    .checkBtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 1px solid black;
+        background-color: white;
+    }
+
+    .couponList{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+        .coupon{
+            display: flex;
+            align-items: center;
+        }
+        
+    }
+
+    .point{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 390px;
+        margin: 10px 0px;
+        .isPoint{
+            width: 200px;
+            height: 48px;
+            border: 1px solid #E6E6E6;
+            border-radius: 4px;
+            text-align: end;
+        }
+    }
+}
+.checkPoint{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 390px;
+}
 
    
 

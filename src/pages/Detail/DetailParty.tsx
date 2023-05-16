@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import DetailNav from '../../components/DetailNav';
+import SubNav from '../../components/SubNav';
 import FreindList from './DetailComponents/FreindList';
 import MenuBox from './DetailComponents/MenuBox';
 import OrderDetail from './DetailComponents/OrderDetail';
@@ -31,13 +32,7 @@ const DetailParty = () => {
   return (
     <div className="detailParty">
       <DetailNav />
-      <div className="subNav">
-        <div className="subNavList">
-          <p>파티모드</p>
-          <button>잡기</button>
-          <p>n개</p>
-        </div>
-      </div>
+      <SubNav subTitle={'파티모드'} />
       <div className="mainDetailList">
         <div className="partyList">
           <h2 className="title">파티모드</h2>

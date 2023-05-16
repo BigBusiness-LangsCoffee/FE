@@ -3,6 +3,7 @@ import Main from './pages/Main/Main';
 import Feed from './pages/Feed/Feed';
 import Map from './pages/Map/Map';
 import MyPage from './pages/MyPage/MyPage';
+import Present from './pages/Present/Present';
 
 const style = {
   border: '1px solid red',

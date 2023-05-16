@@ -1,4 +1,115 @@
 .MContain{
   width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+
+.MypageTopTitle{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  div{
+    font-size: 13px;
+  }
+  img{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+  }
+}
+
+.GiftPeople{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 10px;
+  p{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.ClickStyle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px auto 0;
+  gap: 20px;
+}
+
+.StarOrSet{
+  width: 165px;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img{
+    margin-left: 15px;
+  }
+  div{
+    font-size: 13px;
+  }
+}
+
+.HrWidth{
+  width: 90%;
+  border: 1px solid #e6e6e6;
+  margin: 30px auto;
+}
+
+.lastOrder{
+  width: 90%;
+  margin: 0 auto;
+}
+.BoxScroll{
+  width: 100%;
+  height: 500px;
+  overflow-y: auto;
+}
+.OrderBox{
+  display: flex;
+  width: 100%;
+ justify-content: center;
+ margin-top: 20px;
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #e6e6e6;
+  }
+  p{
+    font-size: 12px;
+    color: #999999;
+  }
+}
+
+.OrderDiv{
+  width: 220px;
+  margin-left: 20px;
+}
+
+.OrderState{
+  font-size: 12px;
+  color: #999999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.OrderClick{
+  display: flex;
+  justify-content: space-between;
+  div{
+    width: 40%;
+    height: 27px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+
+.HideBox{
+  height: 15%;
 }

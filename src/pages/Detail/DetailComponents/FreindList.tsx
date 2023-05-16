@@ -7,6 +7,7 @@ const FreindList = ({ name }: { name: string }) => {
     <div className="partners">
       <p>{name}</p>
       <button
+        className={isInvite ? 'complete' : ''}
         onClick={() => {
           setIsInvite(true);
         }}

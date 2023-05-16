@@ -123,10 +123,22 @@ const DetailParty = () => {
           </div>
           <div>
             <div>1234 **** **** ****</div>
-            <div>
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
+            <div className="cardList">
+              <div className="cards">
+                <button>
+                  <div></div>
+                </button>
+              </div>
+              <div className="cards">
+                <button>
+                  <div></div>
+                </button>
+              </div>
+              <div className="cards">
+                <button>
+                  <div></div>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -46,6 +46,11 @@ const MypagePayAndAlarm = () => {
 
   return (
     <div>
+      {modalOpen && (
+        <Modal OnModal={() => OnOffModal(modalOpen, setModalOpen)}>
+          <div className="ModalOpen">모달 내용 들어갈 부분들</div>
+        </Modal>
+      )}
       <Header />
       <Profiles />
       <div className="changeMyInfo">
@@ -78,7 +83,6 @@ const MypagePayAndAlarm = () => {
             <div className="passOrCard">
               <div>결제 비밀번호 변경</div>
               <div onClick={() => OnOffModal(modalOpen, setModalOpen)}>카드 추가하기</div>
-              {modalOpen && <Modal OnModal={() => OnOffModal(modalOpen, setModalOpen)}>1</Modal>}
             </div>
           </>
         ) : (

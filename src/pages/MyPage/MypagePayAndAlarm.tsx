@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { menu } from '../../asset/pic';
 import Profiles from '../../components/common/Profiles';
 import Header from '../../components/nav/Header';
+import Modal from '../../modal/Modal';
+import { OnOffModal } from '../../modal/OnOffModal';
 import MypageCardBox from './MypageCardBox';
 import './MypagePayAndAlarm.scss';
 
@@ -10,6 +12,7 @@ const MypagePayAndAlarm = () => {
   const navigate = useNavigate();
   const [payment, setPayment] = useState<boolean>(false);
   const [alarm, setAlarm] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
   const a = [
     {
       id: 1,
@@ -74,7 +77,8 @@ const MypagePayAndAlarm = () => {
             </div>
             <div className="passOrCard">
               <div>결제 비밀번호 변경</div>
-              <div>카드 추가하기</div>
+              <div onClick={() => OnOffModal(modalOpen, setModalOpen)}>카드 추가하기</div>
+              {modalOpen && <Modal OnModal={() => OnOffModal(modalOpen, setModalOpen)}>1</Modal>}
             </div>
           </>
         ) : (

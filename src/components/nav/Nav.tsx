@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { feedIcon, myInfo, orderIcon } from '../../asset/pic';
 import './Nav.scss';
 
 const Nav = () => {
+  const navigate = useNavigate();
   const navData = [
     {
       id: 1,
@@ -28,7 +30,7 @@ const Nav = () => {
             ) : nav.name === '주문' ? (
               <img src={orderIcon} />
             ) : (
-              <img src={myInfo} />
+              <img src={myInfo} onClick={() => navigate('/mypage')} />
             )}
           </div>
           <p>{nav.name}</p>

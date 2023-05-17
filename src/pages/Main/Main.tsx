@@ -1,14 +1,6 @@
-import styled from 'styled-components';
+import './Main.scss';
 
 function Main() {
-  return (
-    <Content>
-      <div>Main</div>
-    </Content>
-  );
+  return <div className="main">Main</div>;
 }
 export default Main;
-
-const Content = styled.div`
-  border: 1px solid red;
-`;

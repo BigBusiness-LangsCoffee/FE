@@ -1,0 +1,109 @@
+img{
+  width: 30px;
+}
+
+// 이미지와 이름등 개인정보 style
+.Info{
+  display: flex;
+  margin: 5% 10%;
+  img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 80%;
+  }
+  div{
+    width: 180px;
+    margin-left: 5%;
+  }
+  .infoFirstDiv{
+    margin: 3% auto 0;
+  }
+  .infoSecondDiv{
+    margin: 3% auto 0;
+  }
+  h1{
+    font-size: 20px;
+  }
+}
+
+// 프로필 수정 부분
+.changeMyInfo{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  div{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.hrLines{
+  width: 90%;
+  border: 1px solid #e6e6e6;
+}
+
+// 각 메뉴 style
+.chooseMenu{
+  width: 85%;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+  .menuCheck{
+    display: flex;
+    div{
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+ 
+}
+
+// 각 메뉴의 토글 div
+.menuToggle{
+    width: 85%;
+    margin: 10px auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+  }
+
+.payBox{
+  width: 160px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E6E6;
+  div{
+    margin-top: 2%;
+    font-size: 17px;
+  }
+  span{
+    font-size: 12px;
+    color:#999999;
+
+  }
+}
+
+.passOrCard{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  div{
+  width: 160px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #E6E6E6;
+  }
+}

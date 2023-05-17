@@ -3,7 +3,6 @@ import './Modal.scss';
 
 interface ModalType {
   OnModal: () => void;
-  children: string;
 }
 
 const Modal = ({ OnModal, children }: PropsWithChildren<ModalType>) => {
@@ -18,7 +17,7 @@ const Modal = ({ OnModal, children }: PropsWithChildren<ModalType>) => {
             OnModal();
           }
         }}
-      ></div>
+      />
     </div>
   );
 };

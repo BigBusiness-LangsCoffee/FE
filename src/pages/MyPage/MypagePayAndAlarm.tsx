@@ -45,7 +45,7 @@ const MypagePayAndAlarm = () => {
   };
 
   return (
-    <div>
+    <div className="PayAlarm">
       {modalOpen && (
         <Modal OnModal={() => OnOffModal(modalOpen, setModalOpen)}>
           <div className="ModalOpen">모달 내용 들어갈 부분들</div>

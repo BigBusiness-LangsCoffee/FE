@@ -5,6 +5,7 @@ import Cropper, { ReactCropperElement } from 'react-cropper';
 import 'cropperjs/dist/cropper.css';
 import Modal from '../../modal/Modal';
 import { OnOffModal } from '../../modal/OnOffModal';
+import MyeditPicture from './MyeditPicture';
 
 const MypageEditMyInfo = () => {
   const navigate = useNavigate();
@@ -12,9 +13,7 @@ const MypageEditMyInfo = () => {
   const [cropData, setCropData] = useState('#');
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const imgRef = useRef<any>(null);
-  const cropperRef = useRef<ReactCropperElement>(null);
   const onChange = (e: any) => {
-    OnOffModal(modalOpen, setModalOpen);
     e.preventDefault();
     let files;
     if (e.dataTransfer) {
@@ -28,45 +27,25 @@ const MypageEditMyInfo = () => {
     };
     reader.readAsDataURL(files[0]);
   };
-
-  const getCropData = () => {
-    if (typeof cropperRef.current?.cropper !== 'undefined') {
-      setCropData(cropperRef.current?.cropper.getCroppedCanvas().toDataURL());
-    }
-    OnOffModal(modalOpen, setModalOpen);
+  const onClickPicture = () => {
+    imgRef.current.click();
+    return navigate('/picturePage');
   };
+
   return (
     <div>
       <div className="topDiv">
         {modalOpen && (
           <Modal OnModal={() => OnOffModal(modalOpen, setModalOpen)}>
-            <Cropper
-              ref={cropperRef}
-              className="cropperDiv"
-              zoomTo={0.5}
-              initialAspectRatio={1}
-              preview=".img-preview"
-              src={image}
-              viewMode={1}
-              minCropBoxHeight={10}
-              minCropBoxWidth={10}
-              background={false}
-              responsive={true}
-              autoCropArea={1}
-              checkOrientation={false}
-              guides={true}
-            />
-            <div>
-              <button onClick={getCropData} className="cropperBtn">
-                이미지 자르기
-              </button>
+            <div>파일 첨부</div>
+            <div onClick={onClickPicture} className="imgView">
+              이동하기
+              <input type="file" onClick={(e) => onChange(e)} ref={imgRef} />
             </div>
           </Modal>
         )}
         <div className="imgView">
-          <input type="file" onChange={onChange} ref={imgRef} id="upload" />
-          <label htmlFor="upload"></label>
-          <img src={cropData} onClick={() => imgRef.current.click()} />
+          <img src={cropData} onClick={() => OnOffModal(modalOpen, setModalOpen)} />
         </div>
         <div className="inputDiv">
           <input maxLength={20} placeholder="20자 이내" />

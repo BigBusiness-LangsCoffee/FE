@@ -1,7 +1,7 @@
 import './MyPage.scss';
 
 const MyPage = () => {
-  return <div>MyPage</div>;
+  return <></>;
 };
 
 export default MyPage;

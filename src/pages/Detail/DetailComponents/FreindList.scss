@@ -1,0 +1,41 @@
+.linkBtnList{
+    display: flex;
+    justify-content: space-around;
+    width: 390px;
+    margin: 5px 0px;
+    button{
+        width: 170px;
+        height: 30px;
+        border: 1px solid #E6E6E6;
+        border-radius: 50px;
+        background-color: #F2F2F2;
+        &:hover{
+            background-color: #F22C00;
+            color: white;
+        }
+}
+}
+
+.partnerList{
+    .partners{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 390px;
+        padding :10px;
+
+        button{
+            width: 100px;
+            border: 1px solid #F22C00;
+            border-radius: 30px;
+            &:hover{
+                background-color: #F22C00;
+                color: white;
+            }
+        }
+        .complete {
+            background-color: #F22C00;
+            color: white;
+        }
+    }
+}

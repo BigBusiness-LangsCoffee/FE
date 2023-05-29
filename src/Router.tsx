@@ -3,6 +3,7 @@ import Main from './pages/Main/Main';
 import Feed from './pages/Feed/Feed';
 import Map from './pages/Map/Map';
 import MyPage from './pages/MyPage/MyPage';
+import Store from './pages/Store/Store';
 
 const style = {
   border: '1px solid red',
@@ -19,6 +20,7 @@ const Router = () => {
           <Route path="/feed" element={<Feed />} />
           <Route path="/map" element={<Map />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/store" element={<Store />} />
         </Routes>
       </div>
     </BrowserRouter>

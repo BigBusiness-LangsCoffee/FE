@@ -1,0 +1,181 @@
+.ListWrapper {
+  height: 100%;
+  width: 448px;
+  background-color: #E6E6E6;
+  padding-top: 16px;
+  padding-left: 19px;
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+  overflow: auto;
+}
+
+.SearchBox {
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+  border: none;
+  padding-left: 10px;
+  font-size: 10px;
+  outline: none;
+}
+
+.SearchBtn {
+  border: 1px solid #999999;
+  background-color: white;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  left: -40px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.SearchTxt {
+  font-size: 8px;
+  letter-spacing: -1px;
+  width: 14px;
+  height: 22px;
+  color: #999999;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
+.ShopWrapper {
+  background-color: #F2F2F2;
+  width: 358px;
+  height: 132px;
+  border-radius: 30px;
+  display: flex;
+  padding: 16px;
+  gap: 12px;
+  margin-top: 23px;
+  cursor: pointer;
+}
+
+.ShopThumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+}
+
+.ShopDescription {
+  width: 214px;
+  height: 100px;
+  padding: 0px;
+  gap: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ShopInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 160px;
+  height: 24px;
+}
+
+.ShopIcon {
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 24px;
+}
+
+.ShopName {
+  width: 126px;
+  height: 19px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -1px;
+  color: #000000;
+}
+
+.ReviewStamps {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 78px;
+  height: 19px;
+}
+
+.Review {
+  width: 25px;
+  height: 19px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -1px;
+}
+
+.Stamps {
+  width: 37px;
+  height: 19px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -1px;
+}
+
+.TimeInfo {
+  width: 78px;
+  height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 124%;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #0c0c0c;
+}
+
+.FollowWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 10px;
+  width: 214px;
+  height: 32px;
+}
+
+.FollowBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 8px;
+  width: 80px;
+  height: 32px;
+  border: 1px solid #e6e6e6;
+  border-radius: 30px;
+}
+
+.FollowCircle {
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 24px;
+}
+
+.FollowTxt {
+  width: 32px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -1px;
+  color: #000000;
+}

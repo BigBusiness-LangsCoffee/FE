@@ -30,16 +30,22 @@ const Map: React.FC = () => {
       </div>
       <div className="MainNav">
         <button className="MainNavBtn">
-          <div className="MainNavIcon">피드</div>
+          <div className="MainNavIcon">
+            <span className="MainNavIconText">피드</span>
+          </div>
           <span className="MainNavText">피드</span>
         </button>
         <button className="MainNavBtn">
-          <div className="MainNavIcon">주문</div>
+          <div className="MainNavIcon">
+            <span className="MainNavIconText">주문</span>
+          </div>
           <span className="MainNavText">주문</span>
         </button>
         <button className="MainNavBtn">
-          <div className="MainNavIcon">내 정보</div>
-          <span className="MainNavText">내 정보</span>
+          <div className="MainNavIcon">
+            <span className="MainNavIconTextMy">내 정보</span>
+          </div>
+          <span className="MainNavTextMy">내 정보</span>
         </button>
       </div>
     </div>

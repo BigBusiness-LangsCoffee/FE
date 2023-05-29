@@ -3,7 +3,6 @@ import Main from './pages/Main/Main';
 import Feed from './pages/Feed/Feed';
 import Map from './pages/Map/Map';
 import MyPage from './pages/MyPage/MyPage';
-import Shop from './components/Shop';
 
 const style = {
   border: '1px solid red',
@@ -19,9 +18,6 @@ const Router = () => {
           <Route path="/" element={<Main />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/map" element={<Map />} />
-          <Route path="/shop" element={<Shop />}>
-            <Route path=":shopid" element={<Shop />} />
-          </Route>
           <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </div>

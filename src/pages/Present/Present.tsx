@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import DetailNav from '../../components/DetailNav';
 import SubNav from '../../components/SubNav';
 import './Present.scss';
 
 const Present = () => {
+  const navigate = useNavigate();
   return (
     <>
       <DetailNav />
@@ -23,7 +25,14 @@ const Present = () => {
         </div>
         <div className="boundaryLine"></div>
         <div>
-          <button className="viewBtn">미리보기</button>
+          <button
+            className="viewBtn"
+            onClick={() => {
+              navigate('/presentPay');
+            }}
+          >
+            미리보기
+          </button>
         </div>
       </div>
     </>

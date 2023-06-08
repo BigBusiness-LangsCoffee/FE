@@ -1,0 +1,120 @@
+.receipt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    padding: 30px 0px;
+    background: #f2f2f2;
+    .smallText {
+        font-size: 12px;
+        color: #999999;
+        margin: 5px 0px;
+    }
+    .firstSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .couponList {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 266px;
+            height: 143px;
+            margin: 20px 0px;
+            padding: 16px 22px;
+            border: 1px solid #f22c00;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+            p {
+                margin-bottom: 10px;
+            }
+            .coupons {
+                display: flex;
+                justify-content: space-around;
+                width: 222px;
+                height: 40px;
+                margin: 10px 0px;
+                .coupon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 22px;
+                    height: 22px;
+                    border: 1px solid;
+                    border-radius: 100%;
+                    color: #999999;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .secondSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 48px;
+        width: 358px;
+        height: 393px;
+        margin: 30px;
+        background: #ffffff;
+        border-radius: 20px;
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .addres {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 262px;
+            button {
+                width: 35px;
+                height: 35px;
+                border: 1px solid #999999;
+                border-radius: 100%;
+                background-color: white;
+                color: #999999;
+                font-size: 10px;
+            }
+        }
+        .priceName {
+            display: flex;
+            justify-content: space-between;
+            width: 262px;
+            margin: 10px 0px;
+            h2 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .buttonList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            display: flex;
+            justify-content: space-between;
+            width: 358px;
+            margin: 20px 0px;
+            .redBtn {
+                width: 171px;
+                height: 51px;
+                border-radius: 30px;
+                border: none;
+                background: #f22c00;
+                color: white;
+            }
+            .closeBtn {
+                width: 171px;
+                height: 51px;
+                background: #e6e6e6;
+                border-radius: 30px;
+                border: none;
+            }
+        }
+    }
+}

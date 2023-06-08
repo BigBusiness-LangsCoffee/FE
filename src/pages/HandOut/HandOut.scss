@@ -1,0 +1,93 @@
+.handOut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    background-color: #f2f2f2;
+
+    .handOutSearch {
+        display: flex;
+        align-items: center;
+        width: 358px;
+        height: 38px;
+        padding: 0px 10px;
+        margin-top: 30px;
+        background: #ffffff;
+        border: 1px solid white;
+        overflow: hidden;
+        border-radius: 100px;
+
+        input {
+            width: 320px;
+            height: 38px;
+            border: none;
+            padding: 10px;
+            outline: none;
+        }
+
+        button {
+            width: 34px;
+            height: 34px;
+            font-size: 6px;
+            background-color: white;
+            border: 1px solid #999999;
+            border-radius: 100%;
+        }
+    }
+    .handOutInfo {
+        margin: 20px 0px;
+        .handOutTitle {
+            width: 358px;
+            margin-bottom: 3px;
+        }
+        .userLine {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 358px;
+            height: 38px;
+            margin: 2px 0px;
+            .userInfo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 102px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                }
+            }
+            button {
+                width: 64px;
+                height: 24px;
+                border: 1px solid #f22c00;
+                border-radius: 1000px;
+                font-size: 12px;
+            }
+        }
+    }
+    .buttonList {
+        display: flex;
+        justify-content: space-between;
+        width: 358px;
+        margin: 20px 0px;
+        .redBtn {
+            width: 171px;
+            height: 51px;
+            border-radius: 30px;
+            border: none;
+            background: #f22c00;
+            color: white;
+        }
+        .closeBtn {
+            width: 171px;
+            height: 51px;
+            background: #e6e6e6;
+            border-radius: 30px;
+            border: none;
+        }
+    }
+}

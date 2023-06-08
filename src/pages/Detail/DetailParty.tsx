@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import BoundaryLine from '../../components/BoundaryLine';
 import DetailNav from '../../components/DetailNav';
+import Payments from '../../components/Payments';
 import SubNav from '../../components/SubNav';
 import FreindList from './DetailComponents/FreindList';
 import MenuBox from './DetailComponents/MenuBox';
@@ -92,7 +94,7 @@ const DetailParty = () => {
             </div>
           </>
         )}
-        <div className="boundaryLine"></div>
+        <BoundaryLine />
         <h2 className="title">{title}</h2>
         <MenuBox price={1000} menuName={menuName} />
         <h2 className="title">{title2}</h2>
@@ -119,7 +121,7 @@ const DetailParty = () => {
             <button className="checkBtn"></button>
           </div>
         </div>
-        <div className="boundaryLine"></div>
+        <BoundaryLine />
         <OrderDetail />
         <div className="needTextBox">
           <p>요청 사항</p>
@@ -131,34 +133,10 @@ const DetailParty = () => {
             }}
           />
         </div>
+        <BoundaryLine />
+        <Payments />
         <div className="boundaryLine"></div>
-        <div className="payBox">
-          <div>
-            <p>결제 수단</p>
-          </div>
-          <div>
-            <div>1234 **** **** ****</div>
-            <div className="cardList">
-              <div className="cards">
-                <button>
-                  <div></div>
-                </button>
-              </div>
-              <div className="cards">
-                <button>
-                  <div></div>
-                </button>
-              </div>
-              <div className="cards">
-                <button>
-                  <div></div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="boundaryLine"></div>
-        <TotalPrice />
+        <TotalPrice object={'결제하기'} />
       </div>
     </div>
   );
@@ -167,14 +145,14 @@ const DetailParty = () => {
 export default DetailParty;
 
 const MYFREINDS = [
-  { id: 1, name: '김은후' },
-  { id: 2, name: '차원준' },
-  { id: 3, name: '김장미' },
-  { id: 4, name: '김유림' },
-  { id: 5, name: '이세연' },
-  { id: 6, name: '이용준' },
-  { id: 7, name: '한대진' },
-  { id: 8, name: '이용진' },
+  { id: 1, name: '철수' },
+  { id: 2, name: '영희' },
+  { id: 3, name: '민수' },
+  { id: 4, name: '맹구' },
+  { id: 5, name: '짱구' },
+  { id: 6, name: '유리' },
+  { id: 7, name: '훈발롬' },
+  { id: 8, name: '짱아' },
 ];
 
 const FIRSTFREINDLIST = [

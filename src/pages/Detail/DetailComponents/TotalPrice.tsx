@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TotalPrice.scss';
 
-const TotalPrice = () => {
+const TotalPrice = ({ object }: { object: string }) => {
+  const navigate = useNavigate();
+  const toPay = () => {
+    if (object === '선물하기') {
+      navigate('/presentCompleate');
+    }
+  };
   return (
     <div>
       <div className="priceInfo">
@@ -17,7 +24,7 @@ const TotalPrice = () => {
         <h2>0 원</h2>
       </div>
       <div className="payment">
-        <button>결제하기</button>
+        <button onClick={toPay}>{object}</button>
       </div>
     </div>
   );
